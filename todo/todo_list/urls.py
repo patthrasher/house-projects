@@ -5,6 +5,7 @@ from . import views
 app_name = 'todo_list'
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('room/', views.room, name='room'),
     path('todo/', views.home, name='home'),
     path('delete/<list_id>', views.delete, name="delete"),
     path('cross_off/<list_id>', views.cross_off, name="cross_off"),

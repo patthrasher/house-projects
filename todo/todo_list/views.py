@@ -3,6 +3,10 @@ from .models import List
 from .forms import ListForm
 from django.contrib import messages
 
+
+def room(request) :
+    return render(request, 'todo_list/room.html', {})
+
 def home(request) :
     # return render(request, 'todo_list/home.html', {})
     if request.method == 'POST' :
