@@ -1,3 +1,7 @@
 .striker {
   text-decoration: line-through;
 }
+
+.category {
+  color: green;
+}
