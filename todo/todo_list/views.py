@@ -14,12 +14,13 @@ def home(request) :
 
         if form.is_valid() :
             form.save()
-            all_items = List.objects.all
-            messages.success(request, ('Item Has Been Added To List!'))
+            all_items = List.objects.all().order_by('room')
+            messages.success(request, ('Project Has Been Added To List!'))
             return render(request, 'todo_list/home.html', {'all_items' : all_items})
 
     else :
-        all_items = List.objects.all
+        # all_items = List.objects.all
+        all_items = List.objects.all().order_by('room')
         return render(request, 'todo_list/home.html', {'all_items' : all_items})
 
 def delete(request, list_id) :

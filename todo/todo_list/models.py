@@ -6,4 +6,4 @@ class List(models.Model) :
     room = models.CharField(max_length=200)
 
     def __str__(self) :
-        return self.item + ' | ' + str(self.completed)
+        return self.item + ' | ' + str(self.completed) + ' | ' + self.room

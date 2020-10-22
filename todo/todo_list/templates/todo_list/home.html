@@ -18,12 +18,14 @@
             {% if things.completed %}
                 <tr class="table-secondary">
                   <td class="striker"><a href="{% url 'todo_list:edit' things.id %}">{{ things.item }}</a></td>
+                  <td><center>{{ things.room }}</center></td>
                   <td><center><a href="{% url 'todo_list:uncross' things.id %}">Uncross</a></center></td>
                   <td><center><a href="{% url 'todo_list:delete' things.id %}">Delete</a></center></td>
                 </tr>
             {% else %}
                 <tr>
                   <td><a href="{% url 'todo_list:edit' things.id %}">{{ things.item }}</a></td>
+                  <td><center>{{ things.room }}</center></td>
                   <td><center><a href="{% url 'todo_list:cross_off' things.id %}">Cross Off</a></center></td>
                   <td><center><a href ="{% url 'todo_list:delete' things.id %}">Delete</a></center></td>
                 </tr>
