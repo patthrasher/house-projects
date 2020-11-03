@@ -1,1 +1,1 @@
-# house-projects
+A CRUD web application to manage home improvement projects and ideas. The user chooses a room and adds a project to the database. The projects are grouped by room and the user is able to cross them off when complete, edit, and delete projects as needed.
